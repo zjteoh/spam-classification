@@ -2,7 +2,7 @@ import os
 import numpy as np
 from collections import Counter
 from sklearn.naive_bayes import MultinomialNB
-from sklearn.svm import LinearSVC
+from sklearn.svm import SVC
 from sklearn.metrics import confusion_matrix
 
 '''
@@ -72,7 +72,7 @@ model_nb.fit(train_features, train_labels)
 result_labels_nb = model_nb.predict(test_features)
 
 # svm
-model_svc = LinearSVC()
+model_svc = SVC()
 model_svc.fit(train_features, train_labels)
 result_labels_svc = model_svc.predict(test_features)
 
