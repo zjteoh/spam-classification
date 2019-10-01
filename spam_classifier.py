@@ -14,10 +14,10 @@ def make_dict(train_dir):
 	for email_path in all_email_paths:
 		with open(email_path) as lines:
 			for idx, line in enumerate(lines):
-					if idx == 2:
-						words = line.split()
-						words = [word for word in words if len(word) > 1 and word.isalpha()]
-						all_words += words
+				if idx == 2:
+					words = line.split()
+					words = [word for word in words if len(word) > 1 and word.isalpha()]
+					all_words += words
 
 	dictionary = Counter(all_words)
 	dictionary = dictionary.most_common(3000)
